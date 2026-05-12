@@ -5,24 +5,32 @@ import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
+import RootLayout from "./components/RootLayout.tsx";
 
 const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <Login />,
+  },
   {
     path: "/admin",
     children: [
       {
         path: "/admin",
         element: <Dashboard />,
-      }
-    ]
+      },
+    ],
   },
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      //paginas publicas aqui
+    ],
   },
 ]);
 
