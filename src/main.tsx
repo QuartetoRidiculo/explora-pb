@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
+import Profile from "./pages/Profile.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+
+  {
+    path: "/profile",
+    element: <Profile/>
+  }
 ]);
 
 createRoot(document.getElementById("root")!).render(
