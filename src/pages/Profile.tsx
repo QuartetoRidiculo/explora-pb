@@ -2,6 +2,7 @@ import { Heart, MapPin, Settings, Star } from 'lucide-react';
 
 
 
+
 export default function Profile() {
   return (
     <>
