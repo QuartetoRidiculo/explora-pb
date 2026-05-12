@@ -33,14 +33,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
+    
+      {
+    path: "/profile",
+    element: <Profile />,
+  },
       // paginas publicas aqui
     ],
   },
 
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
+  
 ]);
 
 createRoot(document.getElementById("root")!).render(
