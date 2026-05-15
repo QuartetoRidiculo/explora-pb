@@ -1,20 +1,13 @@
 import { Star, MapPin } from "lucide-react";
-
-interface RestaurantProps {
-  name: string;
-  city: string;
-  image: string;
-  rating: number;
-  cuisine: string;
-}
+import type { Restaurant } from "../types";
 
 export default function RestaurantCard({
   restaurant,
 }: {
-  restaurant: RestaurantProps;
+  restaurant: Restaurant;
 }) {
   return (
-    <div className="group flex gap-4 p-3 rounded-xl hover:bg-gray-200/50 transition-colors cursor-pointer">
+    <div className="group flex gap-4 p-3 rounded-xl hover:bg-gray-200/50 transition-colors">
       <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
         <img
           src={restaurant.image}
@@ -23,14 +16,10 @@ export default function RestaurantCard({
         />
       </div>
       <div className="flex-1 min-w-0">
-        <h4 className="font-semibold text-sm">
-          {restaurant.name}
-        </h4>
+        <h4 className="font-semibold text-sm">{restaurant.name}</h4>
         <div className="flex items-center gap-1.5 mt-1">
           <MapPin className="w-3 h-3 text-gray-500" />
-          <span className="text-xs text-gray-500">
-            {restaurant.city}
-          </span>
+          <span className="text-xs text-gray-500">{restaurant.city}</span>
         </div>
         <div className="flex items-center gap-2 mt-2">
           <div className="flex items-center gap-1">
