@@ -10,7 +10,7 @@ export interface CardProps {
   qtdReviews: number;
 }
 
-export default function Card({ props }: { props: CardProps }) {
+export default function DestinationCard({ props }: { props: CardProps }) {
   return (
     <Link to={props.href}>
       <div className="group rounded-2xl overflow-hidden shadow-md max-w-sm w-full bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
@@ -20,7 +20,7 @@ export default function Card({ props }: { props: CardProps }) {
             alt={props.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <button className="absolute top-4 right-4 bg-white/70 backdrop-blur-sm p-2 rounded-full transition hover:scale-110">
+          <button className="absolute top-4 right-4 bg-white/70 backdrop-blur-sm p-2 rounded-full transition hover:scale-110 cursor-pointer">
             <Heart />
           </button>
         </div>

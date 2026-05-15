@@ -1,5 +1,5 @@
 import { Heart, MapPin, Settings, Star } from "lucide-react";
-import Card from "../components/Card";
+import DestinationCard from "../components/DestinationCard";
 
 export default function Profile() {
   return (
@@ -13,7 +13,7 @@ export default function Profile() {
             </div>
           </div>
           <div className="flex shadow-md px-2 rounded-2xl items-center hover:bg-white">
-            <Settings className="text-emerald-500"/>
+            <Settings className="text-emerald-500" />
             <button className="px-4 py-1 w-35 cursor-pointer ">
               Editar perfil
             </button>
@@ -21,19 +21,19 @@ export default function Profile() {
         </div>
         <div className="flex gap-4 justify-center">
           <div className="flex  w-50 h-30 bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <MapPin className="text-emerald-500"/>
+            <MapPin className="text-emerald-500" />
             <h2>23</h2>
             <p>Locais visitados</p>
           </div>
 
           <div className="flex w-50 h-30  bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <Heart className="text-emerald-500"/>
+            <Heart className="text-emerald-500" />
             <h2>4</h2>
             <p>Favoritos</p>
           </div>
 
           <div className="flex w-50 h-30  bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <Star className="text-emerald-500"/>
+            <Star className="text-emerald-500" />
             <h2>8</h2>
             <h2>Avaliações</h2>
           </div>
@@ -52,7 +52,7 @@ export default function Profile() {
         </div>
 
         <div className="flex gap-4 pt-8">
-          <Card
+          <DestinationCard
             props={{
               href: "/local/1",
               rating: 4.8,
@@ -64,7 +64,7 @@ export default function Profile() {
             }}
           />
 
-          <Card
+          <DestinationCard
             props={{
               href: "/local/2",
               rating: 4.5,
@@ -76,7 +76,7 @@ export default function Profile() {
             }}
           />
 
-          <Card
+          <DestinationCard
             props={{
               href: "/local/3",
               rating: 4.3,
@@ -87,7 +87,7 @@ export default function Profile() {
               qtdReviews: 120,
             }}
           />
-          <Card
+          <DestinationCard
             props={{
               href: "/local/4",
               rating: 3.9,
