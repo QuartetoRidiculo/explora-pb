@@ -1,21 +1,23 @@
-import { Compass, Heart, User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Heart, User } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import Title from "./Title";
 
 export default function Navbar() {
-  return (
-    <nav className="sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl shadow-sm h-20 flex items-center justify-around">
-      <Link to="/" className="flex items-center gap-2">
-        <div className="w-9 h-9 bg-linear-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center">
-          <Compass className="w-5 h-5 text-white" />
-        </div>
-        <h1 className="text-xl font-heading font-bold">Explora</h1>
-      </Link>
+  const isHome = useLocation().pathname === "/";
 
-      <ul className="flex items-center gap-6">
+  return (
+    <nav
+      className={`${isHome ? "fixed bg-transparent" : "sticky bg-white/80 shadow-sm"} top-0 left-0 right-0 z-50 backdrop-blur-xl h-20 flex items-center justify-around`}
+    >
+      <Title color={`${isHome ? "white" : "black"}`} />
+
+      <ul
+        className={`${isHome ? "text-white" : "text-gray-500"} flex items-center gap-6`}
+      >
         <li>
           <Link
             to="/explore"
-            className="text-gray-500 px-4 py-2 hover:bg-gray-200 rounded-2xl hover:text-black"
+            className="px-4 py-2 hover:bg-gray-200/50 rounded-2xl hover:text-black"
           >
             Explorar
           </Link>
@@ -23,26 +25,35 @@ export default function Navbar() {
         <li>
           <Link
             to="/cities"
-            className="text-gray-500 px-4 py-2 hover:bg-gray-200 rounded-2xl hover:text-black"
+            className="px-4 py-2 hover:bg-gray-200/50 rounded-2xl hover:text-black"
           >
             Cidades
           </Link>
         </li>
       </ul>
 
-      <ul className="flex items-center gap-4">
-        <li>
+      <ul
+        className={`${isHome ? "text-white" : "text-gray-500"} flex items-center gap-2`}
+      >
+        <li
+          className={`${isHome ? "hover:bg-gray-100/40" : "hover:bg-gray-200/50"} p-2 rounded-full`}
+        >
           <Link to="/favorites">
-            <Heart className="hover:text-emerald-700 duration-150" />
+            <Heart />
           </Link>
         </li>
-        <li>
+        <li
+          className={`${isHome ? "hover:bg-gray-100/40" : "hover:bg-gray-200/50"} p-2 rounded-full`}
+        >
           <Link to="/profile">
-            <User className="hover:text-emerald-700 duration-150" />
+            <User />
           </Link>
         </li>
         <li>
-          <Link to="/login" className="px-5 py-3 bg-emerald-500 text-white hover:bg-emerald-600 rounded-4xl">
+          <Link
+            to="/login"
+            className="px-5 py-3 bg-emerald-500 text-white hover:bg-emerald-500/90 rounded-4xl"
+          >
             Entrar
           </Link>
         </li>

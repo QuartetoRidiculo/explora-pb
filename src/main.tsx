@@ -8,6 +8,9 @@ import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
 import Profile from "./pages/Profile.tsx";
 import RootLayout from "./components/RootLayout.tsx";
+import NotFound from "./pages/NotFound.tsx";
+import Favorite from "./pages/Favorite.tsx";
+import DestinationDetail from "./pages/DestinationDetail.tsx";
 
 const router = createBrowserRouter([
   {
@@ -33,20 +36,29 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-    
+
       {
-    path: "/profile",
-    element: <Profile />,
-  },
-      // paginas publicas aqui
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/favorites",
+        element: <Favorite />,
+      },
+      {
+        path: "/destination/:id",
+        element: <DestinationDetail />,
+      },
     ],
   },
-
-  
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
