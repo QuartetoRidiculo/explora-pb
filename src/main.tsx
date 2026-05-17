@@ -9,6 +9,9 @@ import Dashboard from "./pages/admin/Dashboard.tsx";
 import Profile from "./pages/Profile.tsx";
 import RootLayout from "./components/RootLayout.tsx";
 import Explore from "./pages/explore/Explore.tsx";
+import NotFound from "./pages/NotFound.tsx";
+import Favorite from "./pages/Favorite.tsx";
+import DestinationDetail from "./pages/DestinationDetail.tsx";
 
 const router = createBrowserRouter([
   {
@@ -44,15 +47,24 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <Profile />,
       },
-      // paginas publicas aqui
+      {
+        path: "/favorites",
+        element: <Favorite />,
+      },
+      {
+        path: "/destination/:id",
+        element: <DestinationDetail />,
+      },
     ],
   },
-
-
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

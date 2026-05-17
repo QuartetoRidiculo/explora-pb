@@ -1,5 +1,6 @@
 import { Heart, MapPin, Settings, Star } from "lucide-react";
-import Card from "../components/Card";
+import DestinationCard from "../components/DestinationCard";
+import { destinations } from "../lib/mockData";
 
 export default function Profile() {
   return (
@@ -13,7 +14,7 @@ export default function Profile() {
             </div>
           </div>
           <div className="flex shadow-md px-2 rounded-2xl items-center hover:bg-white">
-            <Settings className="text-emerald-500"/>
+            <Settings className="text-emerald-500" />
             <button className="px-4 py-1 w-35 cursor-pointer ">
               Editar perfil
             </button>
@@ -21,19 +22,19 @@ export default function Profile() {
         </div>
         <div className="flex gap-4 justify-center">
           <div className="flex  w-50 h-30 bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <MapPin className="text-emerald-500"/>
+            <MapPin className="text-emerald-500" />
             <h2>23</h2>
             <p>Locais visitados</p>
           </div>
 
           <div className="flex w-50 h-30  bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <Heart className="text-emerald-500"/>
+            <Heart className="text-emerald-500" />
             <h2>4</h2>
             <p>Favoritos</p>
           </div>
 
           <div className="flex w-50 h-30  bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
-            <Star className="text-emerald-500"/>
+            <Star className="text-emerald-500" />
             <h2>8</h2>
             <h2>Avaliações</h2>
           </div>
@@ -52,52 +53,9 @@ export default function Profile() {
         </div>
 
         <div className="flex gap-4 pt-8">
-          <Card
-            props={{
-              href: "/local/1",
-              rating: 4.8,
-              title: "Praia de Tambaba",
-              location: "Conde - PB",
-              imgUrl:
-                "https://cdn.jornaldaparaiba.com.br/wp-content/uploads/2023/01/BAIA-DA-TRAICAO.png",
-              qtdReviews: 120,
-            }}
-          />
-
-          <Card
-            props={{
-              href: "/local/2",
-              rating: 4.5,
-              title: "Lajedo de Pai Mateus",
-              location: "Cabaceiras - PB",
-              imgUrl:
-                "https://files.clickpb.com.br/wp-content/uploads/2023/12/31134503/lajedo-de-pai-mateus.jpg",
-              qtdReviews: 87,
-            }}
-          />
-
-          <Card
-            props={{
-              href: "/local/3",
-              rating: 4.3,
-              title: "Parque do Povo",
-              location: " Campina Grande - PB",
-              imgUrl:
-                "https://www.segueviagem.com.br/wp-content/uploads/2022/03/Parque-do-Povo-Campina-Grande-Paraiba-Credito-editorial-Cacio-Murilo-shutterstock_1954331074.jpg",
-              qtdReviews: 120,
-            }}
-          />
-          <Card
-            props={{
-              href: "/local/4",
-              rating: 3.9,
-              title: "Parque Estadual Pedra da Boca",
-              location: "Araruna - PB",
-              imgUrl:
-                "https://uploads.clickpb.com.br/clicktur/wp-content/uploads/2025/04/DSC8308-1200x800.jpg",
-              qtdReviews: 60,
-            }}
-          />
+          {destinations.slice(0, 4).map((destination) => (
+            <DestinationCard destination={destination} />
+          ))}
         </div>
       </div>
     </>

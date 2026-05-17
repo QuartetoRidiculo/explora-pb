@@ -3,11 +3,8 @@ import {
 } from "lucide-react";
 
 import Footer from "../../components/Footer";
-import Card from "../../components/Card";
-import Navbar from "../../components/Navbar";
+import DestinationCard from "../../components/DestinationCard";
 
-
-< Navbar />
 const cards = [
   {
     href: "/explore",
@@ -17,6 +14,7 @@ const cards = [
     imgUrl: "/img/paris.jpg",
     qtdReviews: 120,
   },
+
   {
     href: "/explore",
     rating: 4.5,
@@ -44,9 +42,9 @@ export default function Explore() {
       <div className="p-2 flex gap-2 justify-around">
         <div className="relative w-3/4">
 
-        <Search className="absolute " />
+          <Search className="absolute " />
 
-          <input 
+          <input
             className="bg-amber-100 w-full h-full"
             type="text"
           />
@@ -62,13 +60,13 @@ export default function Explore() {
       </select>
 
       <div className="grid gap-4">
-  {cards.map((card) => (
-    <Card
-      key={card.title}
-      props={card}
-    />
-  ))}
-</div>
+        {cards.map((card) => (
+          <DestinationCard
+            key={card.title}
+            props={card}
+          />
+        ))}
+      </div>
 
       <Footer />
 

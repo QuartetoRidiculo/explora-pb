@@ -6,9 +6,9 @@ export default function RootLayout() {
   return (
     <>
       <Navbar />
-      <div className="bg-slate-50">
-        <Outlet />
-      </div>
+        <div className="bg-gray-50">
+          <Outlet />
+        </div>
       <Footer />
     </>
   );
