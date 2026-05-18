@@ -6,11 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
-import Profile from "./pages/Profile.tsx";
+import Cities from "./pages/cities/Cities.tsx";
+import CitiesInfo from "./pages/cities/CitiesInfo.tsx";
 import RootLayout from "./components/RootLayout.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Favorite from "./pages/Favorite.tsx";
+import Profile from "./pages/Profile.tsx";
 import DestinationDetail from "./pages/DestinationDetail.tsx";
+import Favorite from "./pages/Favorite.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <NotFound />,
+  },
+  {
+    path: "/cities",
+    element: <Cities />,
+  },
+  {
+    path: "/cities/:id",
+    element: <CitiesInfo />
   },
 ]);
 
