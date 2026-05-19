@@ -8,6 +8,7 @@ import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
 import Profile from "./pages/Profile.tsx";
 import RootLayout from "./components/RootLayout.tsx";
+import About from "./pages/About.tsx";
 
 const router = createBrowserRouter([
   {
@@ -33,20 +34,20 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-    
+
       {
-    path: "/profile",
-    element: <Profile />,
-  },
-      // paginas publicas aqui
+        path: "/profile",
+        element: <Profile />,
+      },
+      {path: "/about",
+        element: <About />
+      }
     ],
   },
-
-  
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
