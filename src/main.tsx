@@ -51,19 +51,19 @@ const router = createBrowserRouter([
         path: "/destination/:id",
         element: <DestinationDetail />,
       },
+      {
+        path: "/cities",
+        element: <Cities />,
+      },
+      {
+        path: "/cities/:id",
+        element: <CitiesInfo />,
+      },
     ],
   },
   {
     path: "*",
     element: <NotFound />,
-  },
-  {
-    path: "/cities",
-    element: <Cities />,
-  },
-  {
-    path: "/cities/:id",
-    element: <CitiesInfo />
   },
 ]);
 
