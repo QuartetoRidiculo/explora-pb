@@ -1,10 +1,6 @@
 export interface Category {
   id: number;
   name: string;
-  icon: string;
-  emoji: string;
-  count: number;
-  color: string;
 }
 
 export interface Destination {

@@ -4,26 +4,43 @@ import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Login from "./pages/Login.tsx";
-import Dashboard from "./pages/admin/Dashboard.tsx";
-import Profile from "./pages/Profile.tsx";
-import RootLayout from "./components/RootLayout.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Favorite from "./pages/Favorite.tsx";
-import DestinationDetail from "./pages/DestinationDetail.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
+import ProfilePage from "./pages/ProfilePage.tsx";
+import RootLayout from "./components/layout/RootLayout.tsx";
+import FavoritesPage from "./pages/FavoritesPage.tsx";
+import DestinationDetailPage from "./pages/DestinationDetailPage.tsx";
+import AdminDestinationsPage from "./pages/admin/AdminDestinationsPage.tsx";
+import AdminRootLayout from "./components/layout/AdminRootLayout.tsx";
+import AdminCitiesPage from "./pages/admin/AdminCitiesPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
+import AdminBusinessPage from "./pages/admin/AdminBusinessPage.tsx";
+import AdminCategoriesPage from "./pages/admin/AdminCategoriesPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/login",
-    element: <Login />,
+    element: <LoginPage />,
   },
 
   {
     path: "/admin",
+    element: <AdminRootLayout />,
     children: [
       {
-        path: "/admin",
-        element: <Dashboard />,
+        path: "/admin/destinos",
+        element: <AdminDestinationsPage />,
+      },
+      {
+        path: "/admin/cidades",
+        element: <AdminCitiesPage />,
+      },
+      {
+        path: "comercios",
+        element: <AdminBusinessPage />,
+      },
+      {
+        path: "categorias",
+        element: <AdminCategoriesPage />, 
       },
     ],
   },
@@ -36,24 +53,23 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-
       {
-        path: "/profile",
-        element: <Profile />,
+        path: "/perfil",
+        element: <ProfilePage />,
       },
       {
-        path: "/favorites",
-        element: <Favorite />,
+        path: "/favoritos",
+        element: <FavoritesPage />,
       },
       {
-        path: "/destination/:id",
-        element: <DestinationDetail />,
+        path: "/destino/:id",
+        element: <DestinationDetailPage />,
       },
     ],
   },
   {
     path: "*",
-    element: <NotFound />,
+    element: <NotFoundPage />,
   },
 ]);
 

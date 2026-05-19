@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
-import Title from "./Title";
+import Title from "../Title";
 
 const footerLinks = {
   Explorar: [

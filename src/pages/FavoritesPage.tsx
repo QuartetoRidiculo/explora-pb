@@ -1,7 +1,7 @@
 import DestinationCard from "../components/DestinationCard";
 import { destinations } from "../lib/mockData";
 
-export default function Favorite() {
+export default function FavoritesPage() {
   return (
     <div className="py-16 space-y-8 mx-32">
       <div>

@@ -15,7 +15,7 @@ import RestaurantCard from "../components/RestaurantCard";
 import { destinations, restaurants, reviews } from "../lib/mockData";
 import ReviewCard from "../components/ReviewCard";
 
-export default function DestinationDetail() {
+export default function DestinationDetailPage() {
   const { id } = useParams();
   const [liked, setLiked] = useState(false);
   const dest = destinations.find((d) => d.id === Number(id)) || destinations[0];
