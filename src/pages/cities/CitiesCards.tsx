@@ -1,5 +1,6 @@
 import { MapPin, ArrowRight } from "lucide-react";
 import { cities } from "../../lib/mockData.ts";
+import { Link } from "react-router-dom";
 
 
 export default function CitiesCards({ name }){
@@ -101,23 +102,23 @@ export default function CitiesCards({ name }){
 
                         </div>
 
-                        <button
-                            className="
-                                mt-6
-                                text-green-600
-                                font-semibold
-                                flex
-                                items-center
-                                gap-2
-                                hover:gap-3
-                                duration-200
-                            "
-                        >
-                            Explorar cidade
+                                <Link
+                                    to={`/cities/${city.id}`}
+                                    className="
+                                        mt-6
+                                        text-green-600
+                                        font-semibold
+                                        flex
+                                        items-center
+                                        gap-2
+                                        hover:gap-3
+                                        duration-200
+                                    "
+                                >
+                                    Explorar cidade
 
-                            <ArrowRight size={18} />
-
-                        </button>
+                                    <ArrowRight size={18} />
+                                </Link>
 
                     </div>
 
