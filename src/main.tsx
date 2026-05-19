@@ -71,6 +71,14 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFoundPage />,
   },
+  {
+    path: "/cities",
+    element: <Cities />,
+  },
+  {
+    path: "/cities/:id",
+    element: <CitiesInfo />
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
