@@ -1,73 +1,122 @@
-# React + TypeScript + Vite
+# 🌍 ExploraPB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **ExploraPB** é uma plataforma web de turismo criada para centralizar informações sobre destinos turísticos, cidades, eventos e comércios locais da Paraíba.
 
-Currently, two official plugins are available:
+A proposta do projeto é facilitar a descoberta de lugares incríveis — principalmente os menos conhecidos — fortalecendo o turismo regional, a cultura local e a economia de pequenos municípios.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# ✨ Objetivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Muitas cidades, pontos turísticos e pequenos comércios da Paraíba possuem pouca presença digital, dificultando sua descoberta por turistas e até pelos próprios moradores.
 
-## Expanding the ESLint configuration
+O ExploraPB surge para resolver isso através de uma plataforma moderna que conecta:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- turistas
+- moradores
+- exploradores
+- comerciantes locais
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+permitindo descobrir:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- praias
+- trilhas
+- cachoeiras
+- restaurantes
+- comércios locais
+- eventos culturais
+- experiências regionais
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 🚀 Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Usuário
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Explorar destinos turísticos
+- Buscar cidades e experiências
+- Favoritar locais
+- Avaliar destinos
+- Descobrir eventos culturais
+- Encontrar comércios próximos
+
+---
+
+## Administração
+
+Painel administrativo completo para gerenciamento da plataforma:
+
+- CRUD de cidades
+- CRUD de pontos turísticos
+- CRUD de categorias
+- CRUD de negócios/comércios
+- Controle de destaques
+- Organização de conteúdos turísticos
+
+---
+
+# 🧠 Proposta do Sistema
+
+O sistema foi pensado para funcionar como um:
+
+- portal turístico moderno
+- vitrine digital regional
+- marketplace turístico
+- central de descoberta cultural
+
+A experiência busca unir:
+
+- tecnologia
+- turismo
+- cultura
+- natureza
+- descoberta
+- economia local
+
+---
+
+# 🎯 Público-Alvo
+
+- turistas
+- viajantes
+- exploradores
+- moradores locais
+- pequenos comerciantes
+- produtores culturais
+
+---
+
+# 📈 Impacto Esperado
+
+O ExploraPB busca:
+
+- aumentar a visibilidade de cidades pequenas
+- fortalecer o comércio local
+- incentivar o turismo regional
+- valorizar a cultura paraibana
+- conectar turistas a experiências autênticas
+
+---
+
+# 📌 Status do Projeto
+
+🚧 Em desenvolvimento
+
+Atualmente o projeto encontra-se em fase de:
+- prototipação
+- construção do frontend
+- modelagem do sistema
+- validação da proposta
+
+---
+
+# 👨‍💻 Desenvolvedores
+
+Projeto acadêmico desenvolvido para a disciplina de Sistemas de Informação.
+
+---
+
+# 📄 Licença
+
+Este projeto possui fins acadêmicos e educacionais.
 ```
