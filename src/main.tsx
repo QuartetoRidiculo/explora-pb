@@ -18,6 +18,7 @@ import Cities from "./pages/cities/Cities.tsx";
 import CitiesInfo from "./pages/cities/CitiesInfo.tsx";
 import AuthPage from "./pages/AuthPage.tsx";
 import Explore from "./pages/explore/Explore.tsx";
+import About from "./pages/About.tsx";
 
 const router = createBrowserRouter([
   {
