@@ -55,6 +55,10 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
+        path: "/sobre",
+        element: <About />
+      },
+      {
         path: "/cidades",
         element: <Cities />,
       },
