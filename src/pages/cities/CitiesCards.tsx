@@ -3,7 +3,7 @@ import { cities } from "../../lib/mockData.ts";
 import { Link } from "react-router-dom";
 
 
-export default function CitiesCards({ name }) {
+export default function CitiesCards({ name }: {name: string}) {
 
     const filteredCities = cities.filter((city) =>
     city.name.toLowerCase().includes(name.toLowerCase())
@@ -103,7 +103,7 @@ export default function CitiesCards({ name }) {
                         </div>
 
                                 <Link
-                                    to={`/cities/${city.id}`}
+                                    to={`/cidades/${city.id}`}
                                     className="
                                         mt-6
                                         text-green-600
