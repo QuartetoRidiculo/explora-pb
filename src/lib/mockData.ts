@@ -22,6 +22,11 @@ export const destinations = [
   {
     id: 1,
     name: "Praia de Tambaba",
+    zipCode: "58322-000",
+    state: "PB",
+    neighborhood: "Tambaba",
+    street: "Rodovia PB-008",
+    number: "S/N",
     city: "Conde",
     cityId: 2,
     category: "Praias",
@@ -30,19 +35,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
     description:
-      "Uma das praias mais bonitas do litoral paraibano, Tambaba é famosa por sua natureza preservada, falésias impressionantes e águas cristalinas. É também uma das poucas praias de naturismo oficial do Brasil.",
+      "Uma das praias mais bonitas do litoral paraibano, Tambaba é famosa por sua natureza preservada, falésias impressionantes e águas cristalinas.",
     featured: true,
     hidden_gem: false,
     latitude: -7.3167,
     longitude: -34.7972,
     hours: "Acesso livre - 24h",
-    tips: "Chegue cedo para aproveitar a maré baixa e as piscinas naturais. Leve protetor solar e água!",
+    tips:
+      "Chegue cedo para aproveitar a maré baixa e as piscinas naturais.",
     climate: "Tropical úmido, 28°C média",
     tags: ["Natureza", "Praia", "Naturismo", "Falésias"],
   },
   {
     id: 2,
     name: "Lajedo do Pai Mateus",
+    zipCode: "58480-000",
+    state: "PB",
+    neighborhood: "Zona Rural",
+    street: "Sítio Pai Mateus",
+    number: "S/N",
     city: "Cabaceiras",
     cityId: 3,
     category: "Aventura",
@@ -51,19 +62,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     description:
-      "Um dos sítios arqueológicos mais impressionantes do Nordeste. Formações rochosas gigantescas esculpidas pelo tempo criam uma paisagem lunar e cinematográfica no sertão da Paraíba.",
+      "Um dos sítios arqueológicos mais impressionantes do Nordeste.",
     featured: true,
     hidden_gem: true,
     latitude: -7.4833,
     longitude: -36.2833,
     hours: "06:00 - 17:00",
-    tips: "Use calçado adequado para trilhas. O melhor horário para fotos é no final da tarde, com o pôr do sol dourado.",
+    tips:
+      "Use calçado adequado para trilhas e leve bastante água.",
     climate: "Semiárido, 32°C média",
-    tags: ["Arqueologia", "Trilha", "Sertão", "Formações Rochosas"],
+    tags: ["Arqueologia", "Trilha", "Sertão"],
   },
   {
     id: 3,
     name: "Pôr do Sol na Praia do Jacaré",
+    zipCode: "58100-000",
+    state: "PB",
+    neighborhood: "Jacaré",
+    street: "Rua do Rio",
+    number: "120",
     city: "Cabedelo",
     cityId: 4,
     category: "Cultura",
@@ -72,19 +89,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800&q=80",
     description:
-      "O famoso Bolero de Ravel ao vivo enquanto o sol mergulha no horizonte do Rio Paraíba. Uma experiência única e emocionante que acontece todas as tardes.",
+      "O famoso Bolero de Ravel ao vivo enquanto o sol mergulha no horizonte.",
     featured: true,
     hidden_gem: false,
     latitude: -7.0333,
     longitude: -34.85,
-    hours: "16:30 - 18:00 (horário varia)",
-    tips: "Chegue pelo menos 1h antes para garantir um bom lugar. Experimente a tapioca dos ambulantes!",
+    hours: "16:30 - 18:00",
+    tips:
+      "Chegue cedo para garantir um bom lugar próximo ao rio.",
     climate: "Tropical, 29°C média",
-    tags: ["Pôr do Sol", "Música", "Cultural", "Rio"],
+    tags: ["Pôr do Sol", "Música", "Cultural"],
   },
   {
     id: 4,
     name: "Praia de Coqueirinho",
+    zipCode: "58322-000",
+    state: "PB",
+    neighborhood: "Coqueirinho",
+    street: "Rodovia PB-008",
+    number: "S/N",
     city: "Conde",
     cityId: 2,
     category: "Praias",
@@ -93,19 +116,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
     description:
-      "Considerada uma das praias mais bonitas do Brasil, Coqueirinho impressiona com suas falésias coloridas, coqueiros e águas em tons de verde esmeralda.",
+      "Uma das praias mais bonitas do Brasil, cercada por falésias.",
     featured: true,
     hidden_gem: false,
     latitude: -7.3,
     longitude: -34.7833,
     hours: "Acesso livre - 24h",
-    tips: "Desça pela trilha da falésia para ter a vista mais bonita. O mirante no topo é imperdível!",
+    tips:
+      "A vista do mirante é absurda. Vá no fim da tarde.",
     climate: "Tropical úmido, 28°C média",
-    tags: ["Praia", "Falésias", "Mirante", "Natureza"],
+    tags: ["Praia", "Falésias", "Mirante"],
   },
   {
     id: 5,
     name: "Centro Histórico de Areia",
+    zipCode: "58397-000",
+    state: "PB",
+    neighborhood: "Centro",
+    street: "Praça Pedro Américo",
+    number: "45",
     city: "Areia",
     cityId: 5,
     category: "Histórico",
@@ -114,19 +143,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80",
     description:
-      "A cidade de Areia, no Brejo Paraibano, é um tesouro cultural com casarões coloniais, museus, engenhos históricos e uma atmosfera de cidade europeia no interior do Nordeste.",
+      "Cidade histórica com casarões coloniais e engenhos.",
     featured: false,
     hidden_gem: true,
     latitude: -6.9667,
     longitude: -35.6833,
     hours: "Acesso livre",
-    tips: "Visite o Museu Pedro Américo e prove a cachaça artesanal dos engenhos locais.",
+    tips:
+      "Experimente as cachaças artesanais da região.",
     climate: "Tropical de altitude, 24°C média",
-    tags: ["Colonial", "Museu", "Engenho", "Brejo"],
+    tags: ["Colonial", "Museu", "Brejo"],
   },
   {
     id: 6,
     name: "Picãozinho",
+    zipCode: "58039-000",
+    state: "PB",
+    neighborhood: "Tambaú",
+    street: "Orla de Tambaú",
+    number: "S/N",
     city: "João Pessoa",
     cityId: 1,
     category: "Praias",
@@ -135,19 +170,25 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
     description:
-      "Piscinas naturais formadas por recifes de coral a 1km da costa. Um aquário natural com peixes coloridos e águas mornas e transparentes.",
+      "Piscinas naturais com águas cristalinas e peixes coloridos.",
     featured: true,
     hidden_gem: false,
     latitude: -7.1167,
     longitude: -34.8167,
     hours: "Depende da maré baixa",
-    tips: "Consulte a tábua de marés antes. Vá de catamarã para a melhor experiência!",
+    tips:
+      "Consulte a tábua de marés antes de visitar.",
     climate: "Tropical, 28°C média",
-    tags: ["Piscinas Naturais", "Coral", "Catamarã", "Mergulho"],
+    tags: ["Piscinas Naturais", "Coral", "Mergulho"],
   },
   {
     id: 7,
     name: "Trilha do Cariri",
+    zipCode: "58123-000",
+    state: "PB",
+    neighborhood: "Zona Rural",
+    street: "Serra do Cariri",
+    number: "S/N",
     city: "Boa Vista",
     cityId: 7,
     category: "Trilhas",
@@ -156,15 +197,16 @@ export const destinations = [
     image:
       "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
     description:
-      "Uma trilha épica pelo sertão paraibano passando por paisagens que lembram o velho oeste americano, com lajeiros, cactos gigantes e uma vista de tirar o fôlego.",
+      "Trilha épica pelo sertão paraibano com paisagens incríveis.",
     featured: false,
     hidden_gem: true,
     latitude: -7.25,
     longitude: -36.2333,
-    hours: "05:00 - 16:00 (recomendado)",
-    tips: "Contrate um guia local. Leve no mínimo 3 litros de água por pessoa.",
+    hours: "05:00 - 16:00",
+    tips:
+      "Leve água e contrate um guia local.",
     climate: "Semiárido, 34°C média",
-    tags: ["Trilha", "Sertão", "Caatinga", "Aventura"],
+    tags: ["Trilha", "Caatinga", "Aventura"],
   },
 ];
 
@@ -172,6 +214,7 @@ export const cities = [
   {
     id: 1,
     name: "João Pessoa",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
     description:
@@ -191,6 +234,7 @@ export const cities = [
   {
     id: 2,
     name: "Conde",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
     description:
@@ -210,6 +254,7 @@ export const cities = [
   {
     id: 3,
     name: "Cabaceiras",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     description:
@@ -228,6 +273,7 @@ export const cities = [
   {
     id: 4,
     name: "Cabedelo",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800&q=80",
     description:
@@ -242,6 +288,7 @@ export const cities = [
   {
     id: 5,
     name: "Areia",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80",
     description:
@@ -256,6 +303,7 @@ export const cities = [
   {
     id: 6,
     name: "Campina Grande",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
     description:
@@ -275,6 +323,7 @@ export const cities = [
   {
     id: 7,
     name: "Sousa",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1606206873764-fd15e242b8f8?w=800&q=80",
     description:
@@ -293,6 +342,7 @@ export const cities = [
   {
     id: 8,
     name: "Patos",
+    state: "PB",
     image:
       "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
     description:
@@ -310,69 +360,139 @@ export const restaurants = [
   {
     id: 1,
     name: "Mangai",
-    city: "João Pessoa",
-    cuisine: "Regional",
-    rating: 4.8,
-    priceRange: "$$",
-    image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    category: "Regional",
     description:
       "O melhor da culinária nordestina em um ambiente elegante e acolhedor.",
+    image:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+
+    city: "João Pessoa",
+    state: "PB",
+    zipCode: "58039-000",
+    neighborhood: "Manaíra",
+    street: "Av. Edson Ramalho",
+    number: "123",
+
+    rating: 4.8,
+    priceRange: "$$",
+
+    phone: "(83) 99999-1111",
+    instagram: "@mangai",
   },
+
   {
     id: 2,
     name: "Nau Frutos do Mar",
-    city: "João Pessoa",
-    cuisine: "Frutos do Mar",
-    rating: 4.7,
-    priceRange: "$$$",
+    category: "Frutos do Mar",
+    description:
+      "Frutos do mar frescos com vista privilegiada para o oceano.",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
-    description: "Frutos do mar frescos com vista para o oceano.",
+
+    city: "João Pessoa",
+    state: "PB",
+    zipCode: "58038-000",
+    neighborhood: "Cabo Branco",
+    street: "Av. Cabo Branco",
+    number: "4580",
+
+    rating: 4.7,
+    priceRange: "$$$",
+
+    phone: "(83) 99999-2222",
+    instagram: "@naurestaurante",
   },
+
   {
     id: 3,
     name: "Empório Café",
-    city: "João Pessoa",
-    cuisine: "Café",
-    rating: 4.6,
-    priceRange: "$$",
+    category: "Cafeteria",
+    description:
+      "Cafeteria artesanal com ambiente moderno e instagramável.",
     image:
       "https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&q=80",
-    description: "Cafeteria artesanal com ambiente instagramável.",
+
+    city: "João Pessoa",
+    state: "PB",
+    zipCode: "58038-300",
+    neighborhood: "Tambaú",
+    street: "Rua Helena Meira Lima",
+    number: "95",
+
+    rating: 4.6,
+    priceRange: "$$",
+
+    phone: "(83) 99999-3333",
+    instagram: "@emporiocafe",
   },
+
   {
     id: 4,
     name: "Bodegas do Sertão",
-    city: "Cabaceiras",
-    cuisine: "Sertaneja",
-    rating: 4.5,
-    priceRange: "$",
+    category: "Sertaneja",
+    description:
+      "Comida típica sertaneja com sabores autênticos do interior paraibano.",
     image:
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-    description: "Comida de raiz com sabores autênticos do sertão.",
+
+    city: "Cabaceiras",
+    state: "PB",
+    zipCode: "58480-000",
+    neighborhood: "Centro",
+    street: "Rua Principal",
+    number: "40",
+
+    rating: 4.5,
+    priceRange: "$",
+
+    phone: "(83) 99999-4444",
+    instagram: "@bodegasdosertao",
   },
+
   {
     id: 5,
     name: "Cozinha da Praia",
-    city: "Conde",
-    cuisine: "Praia",
-    rating: 4.4,
-    priceRange: "$$",
+    category: "Praia",
+    description:
+      "Peixes e frutos do mar frescos servidos literalmente pé na areia.",
     image:
       "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=800&q=80",
-    description: "Peixes e frutos do mar frescos pé na areia.",
+
+    city: "Conde",
+    state: "PB",
+    zipCode: "58322-000",
+    neighborhood: "Jacumã",
+    street: "Beira Mar",
+    number: "S/N",
+
+    rating: 4.4,
+    priceRange: "$$",
+
+    phone: "(83) 99999-5555",
+    instagram: "@cozinhadapraia",
   },
+
   {
     id: 6,
     name: "Engenho Doce",
-    city: "Areia",
-    cuisine: "Doces Regionais",
-    rating: 4.9,
-    priceRange: "$",
+    category: "Doceria",
+    description:
+      "Doces artesanais tradicionais do brejo paraibano com receitas centenárias.",
     image:
       "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800&q=80",
-    description: "Doces artesanais do brejo com receitas centenárias.",
+
+    city: "Areia",
+    state: "PB",
+    zipCode: "58397-000",
+    neighborhood: "Centro Histórico",
+    street: "Rua do Comércio",
+    number: "12",
+
+    rating: 4.9,
+    priceRange: "$",
+
+    phone: "(83) 99999-6666",
+    instagram: "@engenhodoce",
   },
 ];
 

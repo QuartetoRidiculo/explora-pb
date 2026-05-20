@@ -2,7 +2,7 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { cities } from "../../lib/mockData.ts";
 
 
-export default function CitiesCards({ name }){
+export default function CitiesCards({ name }) {
 
     const filteredCities = cities.filter((city) =>
     city.name.toLowerCase().includes(name.toLowerCase())
