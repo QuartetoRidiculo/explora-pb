@@ -1,15 +1,16 @@
 export interface Category {
   id: number;
   name: string;
-  icon: string;
-  emoji: string;
-  count: number;
-  color: string;
 }
 
 export interface Destination {
   id: number;
   name: string;
+  zipCode: string;
+  state: string;
+  neighborhood: string;
+  street: string;
+  number: string;
   city: string;
   cityId: number;
   category: string;
@@ -36,6 +37,7 @@ export interface CityStats {
 export interface City {
   id: number;
   name: string;
+  state: string;
   image: string;
   description: string;
   attractions: number;
@@ -49,12 +51,22 @@ export interface City {
 export interface Restaurant {
   id: number;
   name: string;
+  category: string;
+  description: string;
+  image: string;
+
   city: string;
-  cuisine: string;
+  state: string;
+  zipCode: string;
+  neighborhood: string;
+  street: string;
+  number: string;
+
   rating: number;
   priceRange: string;
-  image: string;
-  description: string;
+
+  phone: string;
+  instagram: string;
 }
 
 export interface Event {
