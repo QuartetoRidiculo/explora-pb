@@ -29,11 +29,7 @@ const router = createBrowserRouter([
     ],
   },
 
-  {
-    path: "/explore",
-    element: <Explore />
-  },
-
+  
   {
     path: "/",
     element: <RootLayout />,
@@ -42,7 +38,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-
+      
       {
         path: "/profile",
         element: <Profile />,
@@ -54,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/destination/:id",
         element: <DestinationDetail />,
+      },
+      {
+        path: "/explore",
+        element: <Explore />
       },
     ],
   },
