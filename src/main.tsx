@@ -4,28 +4,48 @@ import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Login from "./pages/Login.tsx";
-import Dashboard from "./pages/admin/Dashboard.tsx";
-import Profile from "./pages/Profile.tsx";
-import RootLayout from "./components/RootLayout.tsx";
-import About from "./pages/About.tsx";
+import ProfilePage from "./pages/ProfilePage.tsx";
+import RootLayout from "./components/layout/RootLayout.tsx";
+import FavoritesPage from "./pages/FavoritesPage.tsx";
+import DestinationDetailPage from "./pages/DestinationDetailPage.tsx";
+import AdminDestinationsPage from "./pages/admin/AdminDestinationsPage.tsx";
+import AdminRootLayout from "./components/layout/AdminRootLayout.tsx";
+import AdminCitiesPage from "./pages/admin/AdminCitiesPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
+import AdminBusinessPage from "./pages/admin/AdminBusinessPage.tsx";
+import AdminCategoriesPage from "./pages/admin/AdminCategoriesPage.tsx";
+import Cities from "./pages/cities/Cities.tsx";
+import CitiesInfo from "./pages/cities/CitiesInfo.tsx";
+import AuthPage from "./pages/AuthPage.tsx";
+import Explore from "./pages/explore/Explore.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/login",
-    element: <Login />,
+    element: <AuthPage />,
   },
-
   {
     path: "/admin",
+    element: <AdminRootLayout />,
     children: [
       {
-        path: "/admin",
-        element: <Dashboard />,
+        path: "/admin/destinos",
+        element: <AdminDestinationsPage />,
+      },
+      {
+        path: "/admin/cidades",
+        element: <AdminCitiesPage />,
+      },
+      {
+        path: "comercios",
+        element: <AdminBusinessPage />,
+      },
+      {
+        path: "categorias",
+        element: <AdminCategoriesPage />,
       },
     ],
   },
-
   {
     path: "/",
     element: <RootLayout />,
@@ -34,15 +54,39 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-
       {
-        path: "/profile",
-        element: <Profile />,
-      },
-      {path: "/about",
+        path: "/sobre",
         element: <About />
-      }
+      },
+      {
+        path: "/cidades",
+        element: <Cities />,
+      },
+      {
+        path: "/cidades/:id",
+        element: <CitiesInfo />,
+      },
+      {
+        path: "/perfil",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/favoritos",
+        element: <FavoritesPage />,
+      },
+      {
+        path: "/destinos",
+        element: <Explore />,
+      },
+      {
+        path: "/destino/:id",
+        element: <DestinationDetailPage />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
 
