@@ -2,7 +2,7 @@ import { Heart, MapPin, Settings, Star } from "lucide-react";
 import DestinationCard from "../components/DestinationCard";
 import { destinations } from "../lib/mockData";
 
-export default function Profile() {
+export default function ProfilePage() {
   return (
     <>
       <div className="p-6 mt">

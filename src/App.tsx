@@ -130,7 +130,7 @@ export default function App() {
             Os lugares mais procurados pelos exploradores da Paraíba nesta
             temporada.
           </p>
-          <div className="grid grid-cols-4 mt-16">
+          <div className="grid grid-cols-4 mt-16 gap-4">
             {destinations.slice(0, 4).map((destination) => (
               <DestinationCard destination={destination} />
             ))}

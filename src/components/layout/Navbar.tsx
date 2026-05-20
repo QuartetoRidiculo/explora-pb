@@ -1,6 +1,6 @@
 import { Heart, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import Title from "./Title";
+import Title from "../Title";
 
 export default function Navbar() {
   const isHome = useLocation().pathname === "/";
@@ -16,7 +16,7 @@ export default function Navbar() {
       >
         <li>
           <Link
-            to="/explore"
+            to="/destinos"
             className="px-4 py-2 hover:bg-gray-200/50 rounded-2xl hover:text-black"
           >
             Explorar
@@ -24,10 +24,18 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            to="/cities"
+            to="/cidades"
             className="px-4 py-2 hover:bg-gray-200/50 rounded-2xl hover:text-black"
           >
             Cidades
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/sobre"
+            className="px-4 py-2 hover:bg-gray-200/50 rounded-2xl hover:text-black"
+          >
+            Sobre
           </Link>
         </li>
       </ul>
@@ -38,14 +46,14 @@ export default function Navbar() {
         <li
           className={`${isHome ? "hover:bg-gray-100/40" : "hover:bg-gray-200/50"} p-2 rounded-full`}
         >
-          <Link to="/favorites">
+          <Link to="/favoritos">
             <Heart />
           </Link>
         </li>
         <li
           className={`${isHome ? "hover:bg-gray-100/40" : "hover:bg-gray-200/50"} p-2 rounded-full`}
         >
-          <Link to="/profile">
+          <Link to="/perfil">
             <User />
           </Link>
         </li>

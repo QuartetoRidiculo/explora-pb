@@ -15,7 +15,7 @@ import RestaurantCard from "../components/RestaurantCard";
 import { destinations, restaurants, reviews } from "../lib/mockData";
 import ReviewCard from "../components/ReviewCard";
 
-export default function DestinationDetail() {
+export default function DestinationDetailPage() {
   const { id } = useParams();
   const [liked, setLiked] = useState(false);
   const dest = destinations.find((d) => d.id === Number(id)) || destinations[0];
@@ -34,7 +34,7 @@ export default function DestinationDetail() {
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/20" />
 
         <div className="absolute top-20 left-0 right-0 px-4 max-w-375 mx-auto flex justify-between items-center">
-          <Link to="/explore">
+          <Link to="/destinos">
             <button className="flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-xl text-white hover:bg-white/30 px-6 py-2 cursor-pointer">
               <ChevronLeft className="w-5 h-5 mr-1" />
               Voltar
