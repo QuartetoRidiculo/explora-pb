@@ -9,6 +9,9 @@ import Dashboard from "./pages/admin/Dashboard.tsx";
 import Cities from "./pages/cities/Cities.tsx";
 import CitiesInfo from "./pages/cities/CitiesInfo.tsx";
 import RootLayout from "./components/RootLayout.tsx";
+import Explore from "./pages/explore/Explore.tsx";
+import NotFound from "./pages/NotFound.tsx";
+import Favorite from "./pages/Favorite.tsx";
 import Profile from "./pages/Profile.tsx";
 import DestinationDetail from "./pages/DestinationDetail.tsx";
 import Favorite from "./pages/Favorite.tsx";
@@ -30,6 +33,7 @@ const router = createBrowserRouter([
     ],
   },
 
+  
   {
     path: "/",
     element: <RootLayout />,
@@ -38,7 +42,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-
+      
       {
         path: "/profile",
         element: <Profile />,
@@ -50,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/destination/:id",
         element: <DestinationDetail />,
+      },
+      {
+        path: "/explore",
+        element: <Explore />
       },
       {
         path: "/cities",
