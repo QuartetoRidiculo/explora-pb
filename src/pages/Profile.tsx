@@ -5,7 +5,7 @@ import { destinations } from "../lib/mockData";
 export default function Profile() {
   return (
     <>
-      <div className="p-6">
+      <div className="p-6 mt">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-4">
             <div className=" h-20 w-20 bg-emerald-500 rounded-full"></div>
@@ -20,7 +20,7 @@ export default function Profile() {
             </button>
           </div>
         </div>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center mt-8">
           <div className="flex  w-50 h-30 bg-white flex-col items-center gap-3 shadow-md p-4 rounded-xl">
             <MapPin className="text-emerald-500" />
             <h2>23</h2>
@@ -52,7 +52,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="flex gap-4 pt-8">
+        <div className="flex gap-4 pt-8 mt-6">
           {destinations.slice(0, 4).map((destination) => (
             <DestinationCard destination={destination} />
           ))}
