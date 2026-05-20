@@ -17,14 +17,7 @@ import AdminCategoriesPage from "./pages/admin/AdminCategoriesPage.tsx";
 import Cities from "./pages/cities/Cities.tsx";
 import CitiesInfo from "./pages/cities/CitiesInfo.tsx";
 import AuthPage from "./pages/AuthPage.tsx";
-import RootLayout from "./components/RootLayout.tsx";
 import Explore from "./pages/explore/Explore.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Favorite from "./pages/Favorite.tsx";
-import Profile from "./pages/Profile.tsx";
-import DestinationDetail from "./pages/DestinationDetail.tsx";
-import Favorite from "./pages/Favorite.tsx";
-import NotFound from "./pages/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
@@ -62,10 +55,6 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/destino/:id",
-        element: <DestinationDetailPage />,
-      },
-      {
         path: "/cidades",
         element: <Cities />,
       },
@@ -82,16 +71,12 @@ const router = createBrowserRouter([
         element: <FavoritesPage />,
       },
       {
-        path: "/explore",
-        element: <Explore />
+        path: "/destinos",
+        element: <Explore />,
       },
       {
-        path: "/cities",
-        element: <Cities />,
-      },
-      {
-        path: "/cities/:id",
-        element: <CitiesInfo />,
+        path: "/destino/:id",
+        element: <DestinationDetailPage />,
       },
     ],
   },

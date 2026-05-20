@@ -10,7 +10,7 @@ export default function DestinationCard({
 }) {
   const [liked, setLiked] = useState(false);
   return (
-    <Link to={`/destination/${destination.id}`}>
+    <Link to={`/destino/${destination.id}`}>
       <div className="group rounded-2xl overflow-hidden shadow-md max-w-sm w-full bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative overflow-hidden h-64">
           <img
