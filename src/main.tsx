@@ -23,7 +23,6 @@ const router = createBrowserRouter([
     path: "/login",
     element: <AuthPage />,
   },
-
   {
     path: "/admin",
     element: <AdminRootLayout />,
@@ -46,7 +45,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
   {
     path: "/",
     element: <RootLayout />,
@@ -74,6 +72,14 @@ const router = createBrowserRouter([
       {
         path: "/favoritos",
         element: <FavoritesPage />,
+      },
+      {
+        path: "/cities",
+        element: <Cities />,
+      },
+      {
+        path: "/cities/:id",
+        element: <CitiesInfo />,
       },
     ],
   },
