@@ -1,3 +1,5 @@
+import { destinations }  from "../lib/mockData"
+
 export default function About() {
   return (
     <div>
@@ -50,7 +52,7 @@ export default function About() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="p-8 w-auto rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow ">
+          <div className="p-8 w-auto rounded-2xl bg-card border border-gray-200 hover:shadow-lg transition-shadow ">
             <h3 className=" font-bold text-xl font-heading text-foreground">
               Turismo sustentável
             </h3>
@@ -59,7 +61,7 @@ export default function About() {
               ambiente e respeitam as comunidades locais
             </p>
           </div>
-          <div className="p-8 w-auto rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow ">
+          <div className="p-8 w-auto rounded-2xl bg-card border border-gray-200 hover:shadow-lg transition-shadow ">
             <h3 className=" font-bold text-xl font-heading text-foreground">
               Valorização cultural
             </h3>
@@ -68,7 +70,7 @@ export default function About() {
               até a gastronomia e artesanato.
             </p>
           </div>
-          <div className="p-8 w-auto rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow ">
+          <div className="p-8 w-auto rounded-2xl bg-card border border-gray-200 hover:shadow-lg transition-shadow ">
             <h3 className=" font-bold text-xl font-heading text-foreground">
               Economia local
             </h3>
@@ -77,7 +79,7 @@ export default function About() {
               das comunidades paraibanas.
             </p>
           </div>
-          <div className="p-8 w-auto rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow ">
+          <div className="p-8 w-auto rounded-2xl bg-card border border-gray-200 hover:shadow-lg transition-shadow ">
             <h3 className=" font-bold text-xl font-heading text-foreground">
               Preservação ambiental
             </h3>
@@ -113,7 +115,9 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div>imagem</div>
+            <div>
+              <img className="rounded-4xl" src={destinations[0].image} alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -129,10 +133,22 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
             <button className="">
-              <a href="">Criar minha conta</a>
+              <a
+                className="inline-flex text-white bg-emerald-500 items-center gap-2 transition-colors disabled:pointer-events-none bg-primary  shadow hover:bg-primary/90 h-10 rounded-full px-10 font-semibold"
+                href=""
+              >
+                Criar minha conta
+              </a>
             </button>
             <button>
-              <a href="">Explorar destinos</a>
+              <a
+                className="inline-flex items-center gap-2 transition-colors
+              disabled:pointer-events-none bg-primary shadow hover:bg-primary/90
+              h-10 rounded-full px-10 font-semibold"
+                href=""
+              >
+                Explorar destinos
+              </a>
             </button>
           </div>
         </div>
