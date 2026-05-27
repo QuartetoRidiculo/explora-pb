@@ -41,7 +41,7 @@ export default function CitiesInfo() {
 
         <div className="absolute top-8 left-8">
           <Link
-            to="/cities"
+            to="/cidades"
             className="
                             bg-white/20
                             backdrop-blur-md
