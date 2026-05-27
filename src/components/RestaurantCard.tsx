@@ -26,9 +26,9 @@ export default function RestaurantCard({
             <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
             <span className="text-xs font-semibold">{restaurant.rating}</span>
           </div>
-          <div className="text-xs font-semibold py-1 px-4 rounded-2xl border border-gray-200">
+           {/* <div className="text-xs font-semibold py-1 px-4 rounded-2xl border border-gray-200">
             {restaurant.cuisine}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
